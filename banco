@@ -1,0 +1,45 @@
+'''
+Exercicio: Crie um software de gerenciamento bancário
+Devera er capaz de criar clientes e contas.
+Cada cliente possui nome, cpf, idade
+Cada conta possui um cilente, saldo, limite, sacar e depositar
+'''
+
+from cliente import Cliente
+from conta import Conta
+
+#Inclusão cliente:
+cliente1 = Cliente('Eduardo','0168',31)
+
+#inclusão conta:
+conta1 = Conta(cliente1,1000,200)
+
+#print (cliente1.nome,cliente1.cpf,cliente1.idade)
+#print(conta1.Cliente.nome,conta1.saldo,conta1.limite)
+#print('Cliente: ',conta1.Cliente.nome)
+#print('Saldo :',conta1.saldo)
+#print('Limite: ',conta1.limite)
+print('Cliente: ')
+print(cliente1)
+print('Conta: ')
+print(conta1)
+
+#Saque:
+print('\nSaque de 100 dinheiros')
+conta1.saque(100)
+print(conta1)
+
+#Saque:
+print('\nSaque de 1000 dinheiros')
+conta1.saque(1000)
+print(conta1)
+
+#Saque:
+print('\nSaque de 200 dinheiros')
+conta1.saque(200)
+print(conta1)
+
+#deposito
+print('\nDeposito de 200 dinheiros')
+conta1.deposito(200)
+print(conta1)
